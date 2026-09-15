@@ -1,0 +1,25 @@
+
+evaluation:
+  dataset: "nuscenes"
+  root: "/workspace/data/nuscenes"
+
+weather_conditions:
+  clear:
+    scenes: ["scene-001", "scene-002", "scene-003"]
+  rain:
+    scenes: ["scene-050", "scene-051"]
+  night:
+    scenes: ["scene-070", "scene-071"]
+  fog:
+    scenes: ["scene-090"]
+
+metrics:
+  - mAP
+  - tracking_accuracy
+  - false_positive_rate
+  - latency_ms
+
+report:
+  output_dir: "/workspace/eval_reports/weather"
+  format: "json"
+  include_plots: true
